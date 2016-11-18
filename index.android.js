@@ -10,6 +10,8 @@ import Search from './compent/Search'
 import ImgaeC from './compent/ImgaeC'
 import MyScrollView from './MyScrollView'
 import MovieList from './MovieList'
+import MyListView from './MyListView'
+import MoveListView from './MoveListView'
 import {
     AppRegistry,
     StyleSheet,
@@ -103,4 +105,4 @@ export default class HelloReactNative extends Component {
  * 同时存在多个并列的子组件， flex：1，均分,如果值不为1就是按比例分
  */
 //程序入口
-AppRegistry.registerComponent('HelloReactNative', () => MovieList);
+AppRegistry.registerComponent('HelloReactNative', () => MoveListView);
