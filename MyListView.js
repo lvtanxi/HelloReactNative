@@ -1,6 +1,12 @@
 import React, {Component} from 'react'
 import InfoList from './InfoList'
 import ViewPagerDemo from './ViewPagerDemo'
+import DataPickerDemo from './DataPickerDemo'
+import GuiDemo from './GuiDemo'
+import ListViewFormHttp from './ListViewFormHttp'
+import BottmTabDemo from './BottmTabDemo'
+import RegisterLeaf from './RegisterLeaf'
+import AnimatedDemo from './AnimatedDemo'
 import {
     AppRegistry,
     StyleSheet,
@@ -11,11 +17,14 @@ import {
 } from 'react-native';
 
 let contens = [
-    "ListView item 0",
-    "ListView item 1",
-    "ListView item 2",
-    "ListView item 3",
-    "ListView item 4"
+    "Info List",
+    "ViewPagerDemo",
+    "DataPickerDemo",
+    "GuiDemo",
+    "ListViewFormHttp",
+    "TabNavigator",
+    "Dialog",
+    "AnimatedDemo"
 ]
 
 export default class MyListView extends Component {
@@ -27,13 +36,36 @@ export default class MyListView extends Component {
         }
     }
 
-    _pressButton(rowData) {
-        const {navigator} = this.props;
-        console.log(rowData.toString().includes("2"));
+    _pressButton(rowData,rowId) {
+        const {navigator} = this.props
+        var component = InfoList
+        switch (parseInt(rowId)){
+            case 1:
+                component = ViewPagerDemo
+                break
+            case 2:
+                component = DataPickerDemo
+                break
+            case 3:
+                component=GuiDemo
+                break
+            case 4:
+                component=ListViewFormHttp
+                break
+            case 5:
+                component=BottmTabDemo
+                break
+            case 6:
+                component=RegisterLeaf
+                break
+            case 7:
+                component=AnimatedDemo
+                break
+        }
         if (navigator) {
             navigator.push({
                 name: 'InfoList',
-                component: rowData.toString().includes("2") ? InfoList : ViewPagerDemo,
+                component: component,
                 params: {
                     message: rowData
                 }
@@ -46,8 +78,8 @@ export default class MyListView extends Component {
             <ListView
                 style={styles.container}
                 dataSource={this.state.dataSource}
-                renderRow={(rowData) =>
-                    <TouchableOpacity  onPress={this._pressButton.bind(this,rowData)}>
+                renderRow={(rowData,sectionID, rowID) =>
+                    <TouchableOpacity  onPress={this._pressButton.bind(this,rowData,rowID)}>
                         <Text style={styles.row}>{rowData}</Text>
                     </TouchableOpacity>
                 }
@@ -69,6 +101,6 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: "blue",
         borderBottomWidth: 0.1,
-        borderColor: "#CCCCCC"
+        borderColor: "#CCCCCC",
     }
 })

@@ -77,3 +77,5 @@ captures/
 
 # Keystore files
 *.jks
+
+*.vscode

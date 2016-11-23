@@ -52,4 +52,4 @@ export default class HelloReactNative extends Component {
  * 同时存在多个并列的子组件， flex：1，均分,如果值不为1就是按比例分
  */
 //程序入口
-AppRegistry.registerComponent('HelloReactNative', () => HelloReactNative);
+AppRegistry.registerComponent('HelloReactNative', () => HelloReactNative)
