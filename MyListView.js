@@ -7,6 +7,7 @@ import ListViewFormHttp from './ListViewFormHttp'
 import BottmTabDemo from './BottmTabDemo'
 import RegisterLeaf from './RegisterLeaf'
 import AnimatedDemo from './AnimatedDemo'
+import ReactAndroidInteractiveDemo from './ReactAndroidInteractiveDemo'
 import {
     AppRegistry,
     StyleSheet,
@@ -24,7 +25,8 @@ let contens = [
     "ListViewFormHttp",
     "TabNavigator",
     "Dialog",
-    "AnimatedDemo"
+    "AnimatedDemo",
+    "ReactAndroidInteractiveDemo"
 ]
 
 export default class MyListView extends Component {
@@ -60,6 +62,9 @@ export default class MyListView extends Component {
                 break
             case 7:
                 component=AnimatedDemo
+                break
+            case 8:
+                component=ReactAndroidInteractiveDemo
                 break
         }
         if (navigator) {
