@@ -8,6 +8,8 @@ import BottmTabDemo from './BottmTabDemo'
 import RegisterLeaf from './RegisterLeaf'
 import AnimatedDemo from './AnimatedDemo'
 import ReactAndroidInteractiveDemo from './ReactAndroidInteractiveDemo'
+import ScrollableTabViewDemo from './ScrollableTabViewDemo'
+import GridViewDemo from './GridViewDemo'
 import {
     AppRegistry,
     StyleSheet,
@@ -26,7 +28,9 @@ let contens = [
     "TabNavigator",
     "Dialog",
     "AnimatedDemo",
-    "ReactAndroidInteractiveDemo"
+    "ReactAndroidInteractiveDemo",
+    "ScrollableTabViewDemo",
+    "GridViewDemo"
 ]
 
 export default class MyListView extends Component {
@@ -65,6 +69,12 @@ export default class MyListView extends Component {
                 break
             case 8:
                 component=ReactAndroidInteractiveDemo
+                break
+            case 9:
+                component=ScrollableTabViewDemo
+                break
+            case 10:
+                component=GridViewDemo
                 break
         }
         if (navigator) {

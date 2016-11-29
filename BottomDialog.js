@@ -12,12 +12,12 @@ let totalHeight = Dimensions.get('window').height;//高
 
 export default class BottomDialog extends Component {
     state = {
-        bottomAnim: new Animated.Value(0)
+        bottomAnim: new Animated.Value(-totalHeight)
     }
 
     componentDidMount() {
         Animated.timing(this.state.bottomAnim, {
-            toValue: totalHeight / 2,
+            toValue: -totalHeight / 2,
             duration: 5000,
             easing: Easing.bounce,
         }).start()
@@ -29,7 +29,7 @@ export default class BottomDialog extends Component {
                 <Animated.View style={{
                 bottom:this.state.bottomAnim
             }}>
-                    <Image source={require('./imags/logo.jpg')} style={styles.image}/>
+                    <Image source={require('./imags/logo.jpg')} style={styles.Image}/>
                 </Animated.View>
             </View>
         )

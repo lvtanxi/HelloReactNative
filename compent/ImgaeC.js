@@ -11,7 +11,7 @@ import {
 export default class ImgaeC extends Component {
     render() {
         return (
-            <View style={styles.container}>
+            <View style={styles.container} >
                 <View style={styles.net}>
                     <Image  style={styles.localImage} source={require('../imags/ic_launcher.png')} />
 

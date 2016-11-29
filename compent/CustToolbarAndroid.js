@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {
     ToolbarAndroid,
-    Navigator,
     BackAndroid,
     View
 } from 'react-native';

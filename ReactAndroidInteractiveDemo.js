@@ -4,6 +4,7 @@ import {
     StyleSheet,
     Text,
     TouchableHighlight,
+    TouchableNativeFeedback,
     View
 } from 'react-native';
 
@@ -15,10 +16,18 @@ export default class ReactAndroidInteractiveDemo extends Component {
         back:"",
         wode:"ceshi"
     }
+    _onPressButton=()=>{
+        
+    }
     render() {
         return (
             <View>
-                <CustToolbarAndroid title="自定义弹出Toast消息" {...this.props}/>
+                <CustToolbarAndroid title="自定义弹出Toast消息" {...this.props} />
+
+                <TouchableNativeFeedback background={TouchableNativeFeedback.SelectableBackground()}>
+                    <View style={{flex:1,height:100, backgroundColor:"#FFE5D7",alignItems: "center",justifyContent:"center",margin:5}}><Text>Button</Text></View>
+                    </TouchableNativeFeedback>
+
                 <CustomButton
                     text="点击自定义Toast方法"
                     onPress={()=>ToastCustomAndroid.toast("我是ToastCustomAndroid弹出消息")}
