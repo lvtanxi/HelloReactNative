@@ -11,6 +11,7 @@ import ReactAndroidInteractiveDemo from './ReactAndroidInteractiveDemo'
 import ScrollableTabViewDemo from './ScrollableTabViewDemo'
 import GridViewDemo from './GridViewDemo'
 import StatasBarDemo from './StatasBarDemo'
+import ListSelectionDemo from './ListSelectionDemo'
 import {
     AppRegistry,
     StyleSheet,
@@ -32,7 +33,8 @@ let contens = [
     "ReactAndroidInteractiveDemo",
     "ScrollableTabViewDemo",
     "GridViewDemo",
-    "StatasBarDemo"
+    "StatasBarDemo",
+    "ListSelectionDemo"
 ]
 
 export default class MyListView extends Component {
@@ -80,6 +82,9 @@ export default class MyListView extends Component {
                 break
             case 11:
                 component=StatasBarDemo
+                break
+            case 12:
+                component=ListSelectionDemo
                 break
         }
         if (navigator) {
