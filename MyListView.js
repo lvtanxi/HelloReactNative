@@ -12,6 +12,7 @@ import ScrollableTabViewDemo from './ScrollableTabViewDemo'
 import GridViewDemo from './GridViewDemo'
 import StatasBarDemo from './StatasBarDemo'
 import ListSelectionDemo from './ListSelectionDemo'
+import ListSelectionFooterDemo from './ListSelectionFooterDemo'
 import {
     AppRegistry,
     StyleSheet,
@@ -34,7 +35,8 @@ let contens = [
     "ScrollableTabViewDemo",
     "GridViewDemo",
     "StatasBarDemo",
-    "ListSelectionDemo"
+    "ListSelectionDemo",
+    "ListSelectionFooterDemo"
 ]
 
 export default class MyListView extends Component {
@@ -83,8 +85,11 @@ export default class MyListView extends Component {
             case 11:
                 component=StatasBarDemo
                 break
-            case 12:
+            case 11:
                 component=ListSelectionDemo
+                break
+            default:
+                component=ListSelectionFooterDemo
                 break
         }
         if (navigator) {

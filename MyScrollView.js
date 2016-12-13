@@ -40,7 +40,7 @@ export default class MyScrollView extends Component {
                             onMomentumScrollEnd={this._onMomentumScrollEnd}
                             refreshControl={
                                 <RefreshControl
-                                refreshing={false}
+                                refreshing={true}
                                 tintColor="red"
                                 title="正在刷新"
                                 onRefresh={this._onRefresh}/>
